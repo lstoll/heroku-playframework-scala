@@ -1,4 +1,5 @@
 /lib/
 *.pyc
 app/tmp
+app/precompiled
 .DS_Store
