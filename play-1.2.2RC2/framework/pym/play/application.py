@@ -224,8 +224,8 @@ class PlayApplication(object):
 
         application_mode = self.readConf('application.mode')
 
-        if application_mode == 'prod':
-            java_args.append('-server')
+        # if application_mode == 'prod':
+        #     java_args.append('-server')
 
         java_policy = self.readConf('java.policy')
         if java_policy != '':
@@ -239,15 +239,15 @@ class PlayApplication(object):
             args += ["--http.port=%s" % self.play_env['http.port']]
         if self.play_env.has_key('https.port'):
             args += ["--https.port=%s" % self.play_env['https.port']]
-            
+
         java_args.append('-Dfile.encoding=utf-8')
 
         if self.readConf('application.mode') == 'dev':
             if not self.play_env["disable_check_jpda"]: self.check_jpda()
-            java_args.append('-Xdebug')
-            java_args.append('-Xrunjdwp:transport=dt_socket,address=%s,server=y,suspend=n' % self.jpda_port)
+            # java_args.append('-Xdebug')
+            # java_args.append('-Xrunjdwp:transport=dt_socket,address=%s,server=y,suspend=n' % self.jpda_port)
             java_args.append('-Dplay.debug=yes')
-        
+
         java_cmd = [self.java_path(), '-javaagent:%s' % self.agent_path()] + java_args + ['-classpath', cp_args, '-Dapplication.path=%s' % self.path, '-Dplay.id=%s' % self.play_env["id"], className] + args
         return java_cmd
 
