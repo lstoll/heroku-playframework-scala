@@ -40,7 +40,7 @@ def before(**kargs):
         # args.append('-XX:PermSize=256m')
         # args.append('-XX:MaxPermSize=256m')
         #args.append('-Xms224m')
-        args.append('-Xmx224m')
+        args.append('-Xmx192m')
         args.append('-client')
         #args.append('-XX:PermSize=112m')
         #args.append('-XX:MaxPermSize=112m')
