@@ -1,0 +1,1946 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>play.db.anorm.SqlParser</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" rel="stylesheet" type="text/css" media="screen" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body class="value" onload="windowTitle();">
+
+      <p id="owner"><a href="../../package.html" class="extype" name="play">play</a>.<a href="../package.html" class="extype" name="play.db">db</a>.<a href="package.html" class="extype" name="play.db.anorm">anorm</a></p>
+
+      <div id="definition">
+        <img src="../../../lib/object_big.png" />
+        <h1>SqlParser</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">SqlParser</span>
+        
+        
+        <span class="result"> extends <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment" id="comment"><div class="block">
+            go to: <a href="SqlParser.html">companion</a>
+          </div><div class="block">
+            linear super types: <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a>, <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>, AnyRef, <span class="extype" name="scala.Any">Any</span>
+          </div></div>
+
+      <div id="template">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          <div id="order">
+                <span class="filtertype">Ordering</span>
+                <ol><li class="alpha in">Alphabetic</li><li class="inherit out">By inheritance</li></ol>
+              </div>
+          <div id="ancestors">
+                <span class="filtertype">Inherited</span>
+                <ol><li class="hideall">Hide All</li><li class="showall">Show all</li></ol>
+                <ol id="linearization"><li class="in" name="play.db.anorm.SqlParser">SqlParser</li><li class="in" name="play.db.anorm.SqlParser">SqlParser</li><li class="in" name="scala.util.parsing.combinator1.Parsers">Parsers</li><li class="in" name="scala.AnyRef">AnyRef</li><li class="in" name="scala.Any">Any</li></ol>
+              </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in">Public</li><li class="all out">All</li></ol>
+            </div>
+          <div id="impl">
+              <span class="filtertype">Impl.</span>
+              <ol><li class="concrete in">Concrete</li><li class="abstract in">Abstract</li></ol>
+            </div>
+        </div>
+
+        
+
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser.ColumnSymbol">
+      <a id="ColumnSymbol:ColumnSymbol"></a>
+      <h4 class="signature"><a href="SqlParser$ColumnSymbol.html">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <span class="name">ColumnSymbol</span>
+        
+        <span class="params">(<span name="name">name: Symbol</span>)</span>
+        <span class="result"> extends Product</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser#Elem">
+      <a id="Elem:Elem"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol">
+        <span class="name">Elem</span>
+        
+        
+        <span class="result"> = <span class="extype" name="scala.Either">Either</span>[<a href="SqlParser$EndOfStream.html" class="extype" name="play.db.anorm.SqlParser.EndOfStream">EndOfStream</a>, <a href="Row.html" class="extype" name="play.db.anorm.Row">Row</a>]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">the type of input elements the provided parsers consume (When consuming invidual characters, a parser is typically
+called a <code></code>scanner<i>, which produces <code></code>tokens</i> that are consumed by what is normally called a <code></code>parser<i>.
+Nonetheless, the same principles apply, regardless of the input type.)</i></p>
+            <div class="fullcomment"><div class="comment cmt"><p>the type of input elements the provided parsers consume (When consuming invidual characters, a parser is typically
+called a <code></code>scanner<i>, which produces <code></code>tokens</i> that are consumed by what is normally called a <code></code>parser<i>.
+Nonetheless, the same principles apply, regardless of the input type.)</i></p></div><div class="block">
+          definition classes: <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a> → <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser.EndOfStream">
+      <a id="EndOfStream:EndOfStream"></a>
+      <h4 class="signature"><a href="SqlParser$EndOfStream.html">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <span class="name">EndOfStream</span>
+        
+        <span class="params">()</span>
+        <span class="result"> extends Product</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers.Error">
+      <a id="Error:Error"></a>
+      <h4 class="signature"><a href="../../../scala/util/parsing/combinator1/Parsers$Error.html">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <span class="name">Error</span>
+        
+        <span class="params">(<span name="msg">msg: String</span>, <span name="next">next: Input</span>)</span>
+        <span class="result"> extends NoSuccess with Product</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">The fatal failure case of ParseResult: contains an error-message and the remaining input.</p>
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser.ExtendedParser">
+      <a id="ExtendedParser:ExtendedParser[A]"></a>
+      <h4 class="signature"><a href="SqlParser$ExtendedParser.html">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <span class="name">ExtendedParser</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="p">p: Parser[A]</span>)</span>
+        <span class="result"> extends Product</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers.Failure">
+      <a id="Failure:Failure"></a>
+      <h4 class="signature"><a href="../../../scala/util/parsing/combinator1/Parsers$Failure.html">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <span class="name">Failure</span>
+        
+        <span class="params">(<span name="msg">msg: String</span>, <span name="next">next: Input</span>)</span>
+        <span class="result"> extends NoSuccess with Product</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">The failure case of ParseResult: contains an error-message and the remaining input.</p>
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser#Input">
+      <a id="Input:Input"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol">
+        <span class="name">Input</span>
+        
+        
+        <span class="result"> = <a href="SqlParser$StreamReader.html" class="extype" name="play.db.anorm.SqlParser.StreamReader">StreamReader</a></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">The parser input is an abstract reader of input elements, i.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>The parser input is an abstract reader of input elements, i.e. the type of input the parsers in this component
+expect.</p></div><div class="block">
+          definition classes: <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a> → <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="true" name="scala.util.parsing.combinator1.Parsers.NoSuccess">
+      <a id="NoSuccess:NoSuccess"></a>
+      <h4 class="signature"><a href="../../../scala/util/parsing/combinator1/Parsers$NoSuccess.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">NoSuccess</span>
+        
+        
+        <span class="result"> extends ParseResult[Nothing]</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">A common super-class for unsuccessful parse results
+</p>
+    </li><li visbl="pub" data-isabs="true" name="scala.util.parsing.combinator1.Parsers.OnceParser">
+      <a id="OnceParser:OnceParser[T]"></a>
+      <h4 class="signature"><a href="../../../scala/util/parsing/combinator1/Parsers$OnceParser.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">OnceParser</span>
+        <span class="tparams">[<span name="T">+T</span>]</span>
+        
+        <span class="result"> extends Parser[T]</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">A parser whose ~ combinator disallows back-tracking.</p>
+    </li><li visbl="pub" data-isabs="true" name="scala.util.parsing.combinator1.Parsers.ParseResult">
+      <a id="ParseResult:ParseResult[T]"></a>
+      <h4 class="signature"><a href="../../../scala/util/parsing/combinator1/Parsers$ParseResult.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">ParseResult</span>
+        <span class="tparams">[<span name="T">+T</span>]</span>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">A base class for parser results.</p>
+    </li><li visbl="pub" data-isabs="true" name="scala.util.parsing.combinator1.Parsers.Parser">
+      <a id="Parser:Parser[T]"></a>
+      <h4 class="signature"><a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">Parser</span>
+        <span class="tparams">[<span name="T">+T</span>]</span>
+        
+        <span class="result"> extends (Input) ⇒ ParseResult[T]</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">The root class of parsers.</p>
+    </li><li visbl="pub" data-isabs="true" name="scala.util.parsing.combinator1.Parsers.ReaderWithLastNoSuccess">
+      <a id="ReaderWithLastNoSuccess:ReaderWithLastNoSuccess"></a>
+      <h4 class="signature"><a href="../../../scala/util/parsing/combinator1/Parsers$ReaderWithLastNoSuccess.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">ReaderWithLastNoSuccess</span>
+        
+        
+        <span class="result"> extends Reader[Elem]</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser.RowParser">
+      <a id="RowParser:RowParser[A]"></a>
+      <h4 class="signature"><a href="SqlParser$RowParser.html">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <span class="name">RowParser</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="f">f: (Row) ⇒ MayErr[SqlRequestError, A]</span>)</span>
+        <span class="result"> extends Parser[A] with Product</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser.StreamReader">
+      <a id="StreamReader:StreamReader"></a>
+      <h4 class="signature"><a href="SqlParser$StreamReader.html">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <span class="name">StreamReader</span>
+        
+        <span class="params">(<span name="s">s: Stream[Row]</span>, <span name="lastNoSuccess">lastNoSuccess: NoSuccess</span>)</span>
+        <span class="result"> extends ReaderWithLastNoSuccess with Product</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers.Success">
+      <a id="Success:Success[T]"></a>
+      <h4 class="signature"><a href="../../../scala/util/parsing/combinator1/Parsers$Success.html">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <span class="name">Success</span>
+        <span class="tparams">[<span name="T">+T</span>]</span>
+        <span class="params">(<span name="result">result: T</span>, <span name="next">next: Input</span>)</span>
+        <span class="result"> extends ParseResult[T] with Product</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">The success case of ParseResult: contains the result and the remaining input.</p>
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers.~">
+      <a id="~:~[a, b]"></a>
+      <h4 class="signature"><a href="../../../scala/util/parsing/combinator1/Parsers$$tilde.html">
+      <span class="kind">case class</span>
+      <span class="symbol">
+        <span class="name">~</span>
+        <span class="tparams">[<span name="a">+a</span>, <span name="b">+b</span>]</span>
+        <span class="params">(<span name="_1">_1: a</span>, <span name="_2">_2: b</span>)</span>
+        <span class="result"> extends Product</span>
+      </span>
+      </a></h4>
+      
+    </li></ol>
+            </div>
+
+        <div class="values members" id="values">
+              <h3>Value Members</h3>
+              <ol><li visbl="pub" data-isabs="false" name="scala.AnyRef#!=">
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">!=</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span>
+        <span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.Any#!=">
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">!=</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span>
+        <span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt"><code>o != arg0</code> is the same as <code>!(o == (arg0))</code>.</p>
+            <div class="fullcomment"><div class="comment cmt"><p><code>o != arg0</code> is the same as <code>!(o == (arg0))</code>.
+</p></div><dl class="paramcmts block"><dt class="param">arg0</dt><dd class="cmt"><p>the object to compare against this object for dis-equality.</p></dd><dt>returns</dt><dd class="cmt"><p><code>false</code> if the receiver object is equivalent to the argument; <code>true</code> otherwise.</p></dd></dl><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: Any
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef###">
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">##</span>
+        
+        <span class="params">()</span>
+        <span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef → Any
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#$asInstanceOf">
+      <a id="$asInstanceOf[T0]():T0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">$asInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="params">()</span>
+        <span class="result">: T0</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#$isInstanceOf">
+      <a id="$isInstanceOf[T0]():Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">$isInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="params">()</span>
+        <span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#==">
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">==</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span>
+        <span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt"><code>o == arg0</code> is the same as <code>if (o eq null) arg0 eq null else o.equals(arg0)</code>.</p>
+            <div class="fullcomment"><div class="comment cmt"><p><code>o == arg0</code> is the same as <code>if (o eq null) arg0 eq null else o.equals(arg0)</code>.
+</p></div><dl class="paramcmts block"><dt class="param">arg0</dt><dd class="cmt"><p>the object to compare against this object for equality.</p></dd><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.</p></dd></dl><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.Any#==">
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">==</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span>
+        <span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt"><code>o == arg0</code> is the same as <code>o.equals(arg0)</code>.</p>
+            <div class="fullcomment"><div class="comment cmt"><p><code>o == arg0</code> is the same as <code>o.equals(arg0)</code>.
+</p></div><dl class="paramcmts block"><dt class="param">arg0</dt><dd class="cmt"><p>the object to compare against this object for equality.</p></dd><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.</p></dd></dl><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: Any
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers.NoSuccess">
+      <a id="NoSuccess:NoSuccess"></a>
+      <h4 class="signature"><a href="../../../scala/util/parsing/combinator1/Parsers$NoSuccess$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">NoSuccess</span>
+        
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">An extractor so NoSuccess(msg, next) can be used in matches.</p>
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#OnceParser">
+      <a id="OnceParser[T]((Input) ⇒ ParseResult[T]):Parser[T] with OnceParser[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">OnceParser</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="f">f: (Input) ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$ParseResult.html" class="extype" name="scala.util.parsing.combinator1.Parsers.ParseResult">ParseResult</a>[T]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T] with <a href="../../../scala/util/parsing/combinator1/Parsers$OnceParser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.OnceParser">OnceParser</a>[T]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#PError">
+      <a id="PError(String,Input):Error"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">PError</span>
+        
+        <span class="params">(<span name="msg">msg: String</span>, <span name="left">left: Input</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Error.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Error">Error</a></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#PFailure">
+      <a id="PFailure(String,Input):Failure"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">PFailure</span>
+        
+        <span class="params">(<span name="msg">msg: String</span>, <span name="left">left: Input</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Failure.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Failure">Failure</a></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#Parser">
+      <a id="Parser[T]((Input) ⇒ ParseResult[T]):Parser[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">Parser</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="f">f: (Input) ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$ParseResult.html" class="extype" name="scala.util.parsing.combinator1.Parsers.ParseResult">ParseResult</a>[T]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#accept">
+      <a id="accept[U](String,PartialFunction[Elem, U]):Parser[U]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">accept</span>
+        <span class="tparams">[<span name="U">U</span>]</span>
+        <span class="params">(<span name="expected">expected: String</span>, <span name="f">f: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[Elem, U]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[U]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">The parser that matches an element in the domain of the partial function <code>f'
+
+
+
+If </code>f' is defined on the first element in the input, <code>f' is applied to it to produce
+this parser's result.
+
+
+
+Example: The parser &lt;code&gt;accept(&quot;name&quot;, {case Identifier(n) =&gt; Name(n)})&lt;/code&gt;
+         accepts an &lt;code&gt;Identifier(n)&lt;/code&gt; and returns a &lt;code&gt;Name(n)&lt;/code&gt;.
+</code></p>
+            <div class="fullcomment"><div class="comment cmt"><p>The parser that matches an element in the domain of the partial function <code>f'
+
+
+
+If </code>f' is defined on the first element in the input, <code>f' is applied to it to produce
+this parser's result.
+
+
+
+Example: The parser &lt;code&gt;accept(&quot;name&quot;, {case Identifier(n) =&gt; Name(n)})&lt;/code&gt;
+         accepts an &lt;code&gt;Identifier(n)&lt;/code&gt; and returns a &lt;code&gt;Name(n)&lt;/code&gt;.
+</code></p></div><dl class="paramcmts block"><dt class="param">expected</dt><dd class="cmt"><p>a description of the kind of element this parser expects (for error messages)</p></dd><dt class="param">f</dt><dd class="cmt"><p>a partial function that determines when this parser is successful and what its output is</p></dd><dt>returns</dt><dd class="cmt"><p>A parser that succeeds if <code>f' is applicable to the first element of the input,
+        applying </code>f' to it to produce the result.
+</p></dd></dl><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#accept">
+      <a id="accept[ES](ES)((ES) ⇒ List[Elem]):Parser[List[Elem]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">accept</span>
+        <span class="tparams">[<span name="ES">ES</span>]</span>
+        <span class="params">(<span name="es">es: ES</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (ES) ⇒ List[Elem]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[List[Elem]]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">A parser that matches only the given list of element <code>es'
+
+
+
+accept(es) succeeds if the input subsequently provides the elements in the list </code>es'.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>A parser that matches only the given list of element <code>es'
+
+
+
+accept(es) succeeds if the input subsequently provides the elements in the list </code>es'.
+</p></div><dl class="paramcmts block"><dt class="param">es</dt><dd class="cmt"><p>the list of expected elements</p></dd><dt>returns</dt><dd class="cmt"><p>a Parser that recognizes a specified list of elements
+</p></dd></dl><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#accept">
+      <a id="accept(Elem):Parser[Elem]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">accept</span>
+        
+        <span class="params">(<span name="e">e: Elem</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[Elem]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">A parser that matches only the given element <code>e'
+
+
+
+The method is implicit so that elements can automatically be lifted to their parsers.
+For example, when parsing </code>Token's, Identifier(&quot;new&quot;) (which is a <code>Token') can be used directly,
+instead of first creating a </code>Parser' using accept(Identifier(&quot;new&quot;)).</p>
+            <div class="fullcomment"><div class="comment cmt"><p>A parser that matches only the given element <code>e'
+
+
+
+The method is implicit so that elements can automatically be lifted to their parsers.
+For example, when parsing </code>Token's, Identifier(&quot;new&quot;) (which is a <code>Token') can be used directly,
+instead of first creating a </code>Parser' using accept(Identifier(&quot;new&quot;)).
+</p></div><dl class="paramcmts block"><dt class="param">e</dt><dd class="cmt"><p>the <code>Elem' that must be the next piece of input for the returned parser to succeed</code></p></dd><dt>returns</dt><dd class="cmt"><p>a <code>tParser' that succeeds if </code>e' is the next available input.
+</p></dd></dl><div class="block">
+          attributes: implicit 
+        </div><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#acceptIf">
+      <a id="acceptIf((Elem) ⇒ Boolean)((Elem) ⇒ String):Parser[Elem]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">acceptIf</span>
+        
+        <span class="params">(<span name="p">p: (Elem) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="params">(<span name="err">err: (Elem) ⇒ String</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[Elem]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#acceptMatch">
+      <a id="acceptMatch[U](String,PartialFunction[Elem, U]):Parser[U]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">acceptMatch</span>
+        <span class="tparams">[<span name="U">U</span>]</span>
+        <span class="params">(<span name="expected">expected: String</span>, <span name="f">f: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[Elem, U]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[U]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#acceptSeq">
+      <a id="acceptSeq[ES](ES)((ES) ⇒ Iterable[Elem]):Parser[List[Elem]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">acceptSeq</span>
+        <span class="tparams">[<span name="ES">ES</span>]</span>
+        <span class="params">(<span name="es">es: ES</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (ES) ⇒ Iterable[Elem]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[List[Elem]]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.Any#asInstanceOf">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        
+        <span class="result">: T0</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">This method is used to cast the receiver object to be of type <code>T0</code>.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>This method is used to cast the receiver object to be of type <code>T0</code>.</p><p>Note that the success of a cast at runtime is modulo Scala's erasure semantics.  Therefore the expression<code>1.asInstanceOf[String]</code> will throw a <code>ClassCastException</code> at runtime, while the expression<code>List(1).asInstanceOf[List[String]]</code> will not.  In the latter example, because the type argument is erased as
+part of compilation it is not possible to check whether the contents of the list are of the requested typed.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the receiver object.</p></dd></dl><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: Any
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser#bool">
+      <a id="bool(String):RowParser[Boolean]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">bool</span>
+        
+        <span class="params">(<span name="columnName">columnName: String</span>)</span>
+        <span class="result">: <a href="SqlParser$RowParser.html" class="extype" name="play.db.anorm.SqlParser.RowParser">RowParser</a>[<span class="extype" name="scala.Boolean">Boolean</span>]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#chainl1">
+      <a id="chainl1[T, U](⇒ Parser[T],⇒ Parser[U],⇒ Parser[(T, U) ⇒ T]):Parser[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">chainl1</span>
+        <span class="tparams">[<span name="T">T</span>, <span name="U">U</span>]</span>
+        <span class="params">(<span name="first">first: ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>, <span name="p">p: ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[U]</span>, <span name="q">q: ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[(T, U) ⇒ T]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">A parser generator that, roughly, generalises the rep1sep generator so that <code>q', which parses the separator,
+produces a left-associative function that combines the elements it separates.
+</code></p>
+            <div class="fullcomment"><div class="comment cmt"><p>A parser generator that, roughly, generalises the rep1sep generator so that <code>q', which parses the separator,
+produces a left-associative function that combines the elements it separates.
+</code></p></div><dl class="paramcmts block"><dt class="param">first</dt><dd class="cmt"><p>a parser that parses the first element</p></dd><dt class="param">p</dt><dd class="cmt"><p>a parser that parses the subsequent elements</p></dd><dt class="param">q</dt><dd class="cmt"><p>a parser that parses the token(s) separating the elements, yielding a left-associative function that
+         combines two elements into one
+</p></dd></dl><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#chainl1">
+      <a id="chainl1[T](⇒ Parser[T],⇒ Parser[(T, T) ⇒ T]):Parser[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">chainl1</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="p">p: ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>, <span name="q">q: ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[(T, T) ⇒ T]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">A parser generator that, roughly, generalises the rep1sep generator so that <code>q', which parses the separator,
+produces a left-associative function that combines the elements it separates.
+
+
+
+ From: J. Fokker. Functional parsers. In J. Jeuring and E. Meijer, editors, Advanced Functional Programming, volume 925 of Lecture Notes in Computer Science, pages 1--23. Springer, 1995.
+</code></p>
+            <div class="fullcomment"><div class="comment cmt"><p>A parser generator that, roughly, generalises the rep1sep generator so that <code>q', which parses the separator,
+produces a left-associative function that combines the elements it separates.
+
+
+
+ From: J. Fokker. Functional parsers. In J. Jeuring and E. Meijer, editors, Advanced Functional Programming, volume 925 of Lecture Notes in Computer Science, pages 1--23. Springer, 1995.
+</code></p></div><dl class="paramcmts block"><dt class="param">p</dt><dd class="cmt"><p>a parser that parses the elements</p></dd><dt class="param">q</dt><dd class="cmt"><p>a parser that parses the token(s) separating the elements, yielding a left-associative function that
+         combines two elements into one
+</p></dd></dl><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#chainr1">
+      <a id="chainr1[T, U](⇒ Parser[T],⇒ Parser[(T, U) ⇒ U],(T, U) ⇒ U,U):Parser[U]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">chainr1</span>
+        <span class="tparams">[<span name="T">T</span>, <span name="U">U</span>]</span>
+        <span class="params">(<span name="p">p: ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>, <span name="q">q: ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[(T, U) ⇒ U]</span>, <span name="combine">combine: (T, U) ⇒ U</span>, <span name="first">first: U</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[U]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">A parser generator that generalises the rep1sep generator so that <code>q', which parses the separator,
+produces a right-associative function that combines the elements it separates. Additionally,
+The right-most (last) element and the left-most combining function have to be supplied.
+
+rep1sep(p: Parser[T], q) corresponds to chainr1(p, q ^^ cons, cons, Nil) (where val cons = (x: T, y: List[T]) =&gt; x :: y)
+</code></p>
+            <div class="fullcomment"><div class="comment cmt"><p>A parser generator that generalises the rep1sep generator so that <code>q', which parses the separator,
+produces a right-associative function that combines the elements it separates. Additionally,
+The right-most (last) element and the left-most combining function have to be supplied.
+
+rep1sep(p: Parser[T], q) corresponds to chainr1(p, q ^^ cons, cons, Nil) (where val cons = (x: T, y: List[T]) =&gt; x :: y)
+</code></p></div><dl class="paramcmts block"><dt class="param">p</dt><dd class="cmt"><p>a parser that parses the elements</p></dd><dt class="param">q</dt><dd class="cmt"><p>a parser that parses the token(s) separating the elements, yielding a right-associative function that
+         combines two elements into one</p></dd><dt class="param">combine</dt><dd class="cmt"><p>the &quot;last&quot; (left-most) combination function to be applied</p></dd><dt class="param">first</dt><dd class="cmt"><p>the &quot;first&quot; (right-most) element to be combined
+</p></dd></dl><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="prt" data-isabs="false" name="scala.AnyRef#clone">
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">clone</span>
+        
+        <span class="params">()</span>
+        <span class="result">: AnyRef</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">This method creates and returns a copy of the receiver object.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>This method creates and returns a copy of the receiver object.</p><p>The default implementation of the <code>clone</code> method is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a copy of the receiver object.</p></dd></dl><div class="block">
+          attributes: protected 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#commit">
+      <a id="commit[T](⇒ Parser[T]):Parser[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">commit</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="p">p: ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Wrap a parser so that its failures become errors (the | combinator will give up as soon as
+ it encounters an error, on failure it simply tries the next alternative)
+</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Wrap a parser so that its failures become errors (the | combinator will give up as soon as
+ it encounters an error, on failure it simply tries the next alternative)
+</p></div><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser#contains">
+      <a id="contains[TT, T&lt;:TT](String,T)(ColumnTo[TT]):Parser[Unit]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">contains</span>
+        <span class="tparams">[<span name="TT">TT</span>, <span name="T">T &lt;: TT</span>]</span>
+        <span class="params">(<span name="columnName">columnName: String</span>, <span name="t">t: T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="ColumnTo.html" class="extype" name="play.db.anorm.ColumnTo">ColumnTo</a>[TT]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser#current">
+      <a id="current[T](String)(ColumnTo[T]):RowParser[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">current</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="columnName">columnName: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="extractor">extractor: <a href="ColumnTo.html" class="extype" name="play.db.anorm.ColumnTo">ColumnTo</a>[T]</span>)</span>
+        <span class="result">: <a href="SqlParser$RowParser.html" class="extype" name="play.db.anorm.SqlParser.RowParser">RowParser</a>[T]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser#current1">
+      <a id="current1[T](String)(ColumnTo[T]):Parser[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">current1</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="columnName">columnName: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="extractor">extractor: <a href="ColumnTo.html" class="extype" name="play.db.anorm.ColumnTo">ColumnTo</a>[T]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser#date">
+      <a id="date(String):RowParser[Date]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">date</span>
+        
+        <span class="params">(<span name="columnName">columnName: String</span>)</span>
+        <span class="result">: <a href="SqlParser$RowParser.html" class="extype" name="play.db.anorm.SqlParser.RowParser">RowParser</a>[<span class="extype" name="java.util.Date">Date</span>]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser#eatRow">
+      <a id="eatRow[T](Parser[T]):Parser[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">eatRow</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="p">p: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#elem">
+      <a id="elem(Elem):Parser[Elem]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">elem</span>
+        
+        <span class="params">(<span name="e">e: Elem</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[Elem]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">A parser that matches only the given element <code>e'
+
+
+
+elem(e) succeeds if the input starts with an element </code>e'
+</p>
+            <div class="fullcomment"><div class="comment cmt"><p>A parser that matches only the given element <code>e'
+
+
+
+elem(e) succeeds if the input starts with an element </code>e'
+</p></div><dl class="paramcmts block"><dt class="param">e</dt><dd class="cmt"><p>the <code>Elem' that must be the next piece of input for the returned parser to succeed</code></p></dd><dt>returns</dt><dd class="cmt"><p>a <code>Parser' that succeeds if </code>e' is the next available input (and returns it).
+</p></dd></dl><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#elem">
+      <a id="elem(String,(Elem) ⇒ Boolean):Parser[Elem]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">elem</span>
+        
+        <span class="params">(<span name="kind">kind: String</span>, <span name="p">p: (Elem) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[Elem]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">A parser matching input elements that satisfy a given predicate</p>
+            <div class="fullcomment"><div class="comment cmt"><p>A parser matching input elements that satisfy a given predicate</p><p>elem(kind, p) succeeds if the input starts with an element <code>e' for which p(e) is true.
+</code></p></div><dl class="paramcmts block"><dt class="param">kind</dt><dd class="cmt"><p>The element kind, used for error messages</p></dd><dt class="param">p</dt><dd class="cmt"><p>A predicate that determines which elements match.
+@return
+</p></dd></dl><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#eq">
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">eq</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span>
+        <span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">This method is used to test whether the argument (<code>arg0</code>) is a reference to the
+receiver object (<code>this</code>).</p>
+            <div class="fullcomment"><div class="comment cmt"><p>This method is used to test whether the argument (<code>arg0</code>) is a reference to the
+receiver object (<code>this</code>).</p><p>The <code>eq</code> method implements an [http://en.wikipedia.org/wiki/Equivalence_relation equivalence relation] on
+non-null instances of <code>AnyRef</code>:
+ * It is reflexive: for any non-null instance <code>x</code> of type <code>AnyRef</code>, <code>x.eq(x)</code> returns <code>true</code>.
+ * It is symmetric: for any non-null instances <code>x</code> and <code>y</code> of type <code>AnyRef</code>, <code>x.eq(y)</code> returns <code>true</code> if and
+   only if <code>y.eq(x)</code> returns <code>true</code>.
+ * It is transitive: for any non-null instances <code>x</code>, <code>y</code>, and <code>z</code> of type <code>AnyRef</code> if <code>x.eq(y)</code> returns <code>true</code>   and <code>y.eq(z)</code> returns <code>true</code>, then <code>x.eq(z)</code> returns <code>true</code>.</p><p>Additionally, the <code>eq</code> method has three other properties.
+ * It is consistent: for any non-null instances <code>x</code> and <code>y</code> of type <code>AnyRef</code>, multiple invocations of
+   <code>x.eq(y)</code> consistently returns <code>true</code> or consistently returns <code>false</code>.
+ * For any non-null instance <code>x</code> of type <code>AnyRef</code>, <code>x.eq(null)</code> and <code>null.eq(x)</code> returns <code>false</code>.
+ * <code>null.eq(null)</code> returns <code>true</code>.</p><p>When overriding the <code>equals</code> or <code>hashCode</code> methods, it is important to ensure that their behavior is
+consistent with reference equality.  Therefore, if two objects are references to each other (<code>o1 eq o2</code>), they
+should be equal to each other (<code>o1 == o2</code>) and they should hash to the same value (<code>o1.hashCode == o2.hashCode</code>).
+</p></div><dl class="paramcmts block"><dt class="param">arg0</dt><dd class="cmt"><p>the object to compare against this object for reference equality.</p></dd><dt>returns</dt><dd class="cmt"><p><code>true</code> if the argument is a reference to the receiver object; <code>false</code> otherwise.</p></dd></dl><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#equals">
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">equals</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span>
+        <span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">This method is used to compare the receiver object (<code>this</code>) with the argument object (<code>arg0</code>) for equivalence.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>This method is used to compare the receiver object (<code>this</code>) with the argument object (<code>arg0</code>) for equivalence.</p><p>The default implementations of this method is an [http://en.wikipedia.org/wiki/Equivalence_relation equivalence
+relation]:
+ * It is reflexive: for any instance <code>x</code> of type <code>Any</code>, <code>x.equals(x)</code> should return <code>true</code>.
+ * It is symmetric: for any instances <code>x</code> and <code>y</code> of type <code>Any</code>, <code>x.equals(y)</code> should return <code>true</code> if and
+   only if <code>y.equals(x)</code> returns <code>true</code>.
+ * It is transitive: for any instances <code>x</code>, <code>y</code>, and <code>z</code> of type <code>AnyRef</code> if <code>x.equals(y)</code> returns <code>true</code> and
+   <code>y.equals(z)</code> returns <code>true</code>, then <code>x.equals(z)</code> should return <code>true</code>.</p><p>If you override this method, you should verify that your implementation remains an equivalence relation.
+Additionally, when overriding this method it is often necessary to override <code>hashCode</code> to ensure that objects
+that are &quot;equal&quot; (<code>o1.equals(o2)</code> returns <code>true</code>) hash to the same 
+scala.Int
+(<code>o1.hashCode.equals(o2.hashCode)</code>).
+</p></div><dl class="paramcmts block"><dt class="param">arg0</dt><dd class="cmt"><p>the object to compare against this object for equality.</p></dd><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is equivalent to the argument; <code>false</code> otherwise.</p></dd></dl><div class="block">
+          definition classes: AnyRef → Any
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#err">
+      <a id="err(String):Parser[Nothing]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">err</span>
+        
+        <span class="params">(<span name="msg">msg: String</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[<span class="extype" name="scala.Nothing">Nothing</span>]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">A parser that results in an error
+</p>
+            <div class="fullcomment"><div class="comment cmt"><p>A parser that results in an error
+</p></div><dl class="paramcmts block"><dt class="param">msg</dt><dd class="cmt"><p>The error message describing the failure.</p></dd><dt>returns</dt><dd class="cmt"><p>A parser that always fails with the specified error message.
+</p></dd></dl><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser#extendParser">
+      <a id="extendParser[A](Parser[A]):ExtendedParser[A]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">extendParser</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="a">a: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[A]</span>)</span>
+        <span class="result">: <a href="SqlParser$ExtendedParser.html" class="extype" name="play.db.anorm.SqlParser.ExtendedParser">ExtendedParser</a>[A]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div><div class="block">
+          definition classes: <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#failure">
+      <a id="failure(String):Parser[Nothing]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">failure</span>
+        
+        <span class="params">(<span name="msg">msg: String</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[<span class="extype" name="scala.Nothing">Nothing</span>]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">A parser that always fails
+</p>
+            <div class="fullcomment"><div class="comment cmt"><p>A parser that always fails
+</p></div><dl class="paramcmts block"><dt class="param">msg</dt><dd class="cmt"><p>The error message describing the failure.</p></dd><dt>returns</dt><dd class="cmt"><p>A parser that always fails with the specified error message.
+</p></dd></dl><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="prt" data-isabs="false" name="scala.AnyRef#finalize">
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">finalize</span>
+        
+        <span class="params">()</span>
+        <span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">This method is called by the garbage collector on the receiver object when garbage collection determines that
+there are no more references to the object.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>This method is called by the garbage collector on the receiver object when garbage collection determines that
+there are no more references to the object.</p><p>The details of when and if the <code>finalize</code> method are invoked, as well as the interaction between <code>finalize</code>and non-local returns and exceptions, are all platform dependent.</p></div><div class="block">
+          attributes: protected 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser#flatten">
+      <a id="flatten[T1, T2, R](TupleFlattener[(~[T1, T2]) ⇒ R]):(~[T1, T2]) ⇒ R"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">flatten</span>
+        <span class="tparams">[<span name="T1">T1</span>, <span name="T2">T2</span>, <span name="R">R</span>]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="f">f: <a href="TupleFlattener.html" class="extype" name="play.db.anorm.TupleFlattener">TupleFlattener</a>[(<a href="../../../scala/util/parsing/combinator1/Parsers$$tilde.html" class="extype" name="scala.util.parsing.combinator1.Parsers.~">~</a>[T1, T2]) ⇒ R]</span>)</span>
+        <span class="result">: (<a href="../../../scala/util/parsing/combinator1/Parsers$$tilde.html" class="extype" name="scala.util.parsing.combinator1.Parsers.~">~</a>[T1, T2]) ⇒ R</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser#get">
+      <a id="get[T](String)(ColumnTo[T]):RowParser[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">get</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="columnName">columnName: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="extractor">extractor: <a href="ColumnTo.html" class="extype" name="play.db.anorm.ColumnTo">ColumnTo</a>[T]</span>)</span>
+        <span class="result">: <a href="SqlParser$RowParser.html" class="extype" name="play.db.anorm.SqlParser.RowParser">RowParser</a>[T]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#getClass">
+      <a id="getClass():java.lang.Class[_]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">getClass</span>
+        
+        <span class="params">()</span>
+        <span class="result">: java.lang.Class[_]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a representation that corresponds to the dynamic class of the receiver object.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a representation that corresponds to the dynamic class of the receiver object.</p><p>The nature of the representation is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a representation that corresponds to the dynamic class of the receiver object.</p></dd></dl><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#guard">
+      <a id="guard[T](⇒ Parser[T]):Parser[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">guard</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="p">p: ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">A parser generator for guard expressions.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>A parser generator for guard expressions. The resulting parser will fail or succeed
+just like the one given as parameter but it will not consume any input.
+</p></div><dl class="paramcmts block"><dt class="param">p</dt><dd class="cmt"><p>a <code>Parser' that is to be applied to the input</code></p></dd><dt>returns</dt><dd class="cmt"><p>A parser that returns success if and only if 'p' succeeds but never consumes any input
+</p></dd></dl><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#hashCode">
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">hashCode</span>
+        
+        <span class="params">()</span>
+        <span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a hash code value for the object.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a hash code value for the object.</p><p>The default hashing algorithm is platform dependent.</p><p>Note that it is allowed for two objects to have identical hash codes (<code>o1.hashCode.equals(o2.hashCode)</code>) yet
+not be equal (<code>o1.equals(o2)</code> returns <code>false</code>).  A degenerate implementation could always return <code>0</code>.
+However, it is required that if two objects are equal (<code>o1.equals(o2)</code> returns <code>true</code>) that they have
+identical hash codes (<code>o1.hashCode.equals(o2.hashCode)</code>).  Therefore, when overriding this method, be sure
+to verify that the behavior is consistent with the <code>equals</code> method.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the hash code value for the object.</p></dd></dl><div class="block">
+          definition classes: AnyRef → Any
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser#int">
+      <a id="int(String):RowParser[Int]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">int</span>
+        
+        <span class="params">(<span name="columnName">columnName: String</span>)</span>
+        <span class="result">: <a href="SqlParser$RowParser.html" class="extype" name="play.db.anorm.SqlParser.RowParser">RowParser</a>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.Any#isInstanceOf">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        
+        <span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">This method is used to test whether the dynamic type of the receiver object is <code>T0</code>.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>This method is used to test whether the dynamic type of the receiver object is <code>T0</code>.</p><p>Note that the test result of the test is modulo Scala's erasure semantics.  Therefore the expression<code>1.isInstanceOf[String]</code> will return <code>false</code>, while the expression <code>List(1).isInstanceOf[List[String]]</code> will
+return <code>true</code>.  In the latter example, because the type argument is erased as part of compilation it is not
+possible to check whether the contents of the list are of the requested typed.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p><code>true</code> if the receiver object is an instance of erasure of type <code>T0</code>; <code>false</code> otherwise.</p></dd></dl><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: Any
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#log">
+      <a id="log[T](⇒ Parser[T])(String):Parser[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">log</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="p">p: ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>)</span><span class="params">(<span name="name">name: String</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser#long">
+      <a id="long(String):RowParser[Long]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">long</span>
+        
+        <span class="params">(<span name="columnName">columnName: String</span>)</span>
+        <span class="result">: <a href="SqlParser$RowParser.html" class="extype" name="play.db.anorm.SqlParser.RowParser">RowParser</a>[<span class="extype" name="scala.Long">Long</span>]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#mkList">
+      <a id="mkList[T]:(~[T, List[T]]) ⇒ List[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">mkList</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        
+        <span class="result">: (<a href="../../../scala/util/parsing/combinator1/Parsers$$tilde.html" class="extype" name="scala.util.parsing.combinator1.Parsers.~">~</a>[T, List[T]]) ⇒ <span class="extype" name="scala.collection.immutable.List">List</span>[T]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#ne">
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">ne</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span>
+        <span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt"><code>o.ne(arg0)</code> is the same as <code>!(o.eq(arg0))</code>.</p>
+            <div class="fullcomment"><div class="comment cmt"><p><code>o.ne(arg0)</code> is the same as <code>!(o.eq(arg0))</code>.
+</p></div><dl class="paramcmts block"><dt class="param">arg0</dt><dd class="cmt"><p>the object to compare against this object for reference dis-equality.</p></dd><dt>returns</dt><dd class="cmt"><p><code>false</code> if the argument is not a reference to the receiver object; <code>true</code> otherwise.</p></dd></dl><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser#newLine">
+      <a id="newLine:Parser[Unit]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">newLine</span>
+        
+        
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#not">
+      <a id="not[T](⇒ Parser[T]):Parser[Unit]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">not</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="p">p: ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[<span class="extype" name="scala.Unit">Unit</span>]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Wrap a parser so that its failures&amp;errors become success and vice versa -- it never consumes any input
+</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Wrap a parser so that its failures&amp;errors become success and vice versa -- it never consumes any input
+</p></div><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#notify">
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">notify</span>
+        
+        <span class="params">()</span>
+        <span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Wakes up a single thread that is waiting on the receiver object's monitor.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Wakes up a single thread that is waiting on the receiver object's monitor.</p></div><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#notifyAll">
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">notifyAll</span>
+        
+        <span class="params">()</span>
+        <span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Wakes up all threads that are waiting on the receiver object's monitor.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Wakes up all threads that are waiting on the receiver object's monitor.</p></div><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#opt">
+      <a id="opt[T](⇒ Parser[T]):Parser[Option[T]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">opt</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="p">p: ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[<span class="extype" name="scala.Option">Option</span>[T]]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">A parser generator for optional sub-phrases.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>A parser generator for optional sub-phrases.</p><p>opt(p) is a parser that returns <code>Some(x)' if </code>p' returns <code>x' and </code>None' if <code>p' fails
+</code></p></div><dl class="paramcmts block"><dt class="param">p</dt><dd class="cmt"><p>A <code>Parser' that is tried on the input</code></p></dd><dt>returns</dt><dd class="cmt"><p>a <code>Parser' that always succeeds: either with the result provided by </code>p' or
+        with the empty result
+</p></dd></dl><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#phrase">
+      <a id="phrase[T](Parser[T]):Parser[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">phrase</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="p">p: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">   A parser generator delimiting whole phrases (i.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>   A parser generator delimiting whole phrases (i.e. programs).</p><p>   <code>phrase(p)</code> succeeds if <code>p</code> succeeds and
+   no input is left over after <code>p</code>.</p></div><dl class="paramcmts block"><dt class="param">p</dt><dd class="cmt"><p>the parser that must consume all input for the resulting parser
+          to succeed.</p></dd><dt>returns</dt><dd class="cmt"><p>a parser that has the same result as <code>p', but that only succeeds
+          if &lt;code&gt;p&lt;/code&gt; consumed all the input.
+</code></p></dd></dl><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#rep">
+      <a id="rep[T](⇒ Parser[T]):Parser[List[T]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">rep</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="p">p: ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[List[T]]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">A parser generator for repetitions.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>A parser generator for repetitions.</p><p> rep(p)   repeatedly uses <code>p' to parse the input until </code>p' fails (the result is a List
+ of the consecutive results of <code>p')
+</code></p></div><dl class="paramcmts block"><dt class="param">p</dt><dd class="cmt"><p>a <code>Parser' that is to be applied successively to the input</code></p></dd><dt>returns</dt><dd class="cmt"><p>A parser that returns a list of results produced by repeatedly applying <code>p' to the input.
+</code></p></dd></dl><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#rep1">
+      <a id="rep1[T](⇒ Parser[T],⇒ Parser[T]):Parser[List[T]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">rep1</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="first">first: ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>, <span name="p0">p0: ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[List[T]]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">A parser generator for non-empty repetitions.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>A parser generator for non-empty repetitions.</p><p> rep1(f, p) first uses <code>f' (which must succeed) and then repeatedly uses </code>p' to
+    parse the input until <code>p' fails
+    (the result is a </code>List' of the consecutive results of <code>f' and </code>p')
+</p></div><dl class="paramcmts block"><dt class="param">first</dt><dd class="cmt"><p>a <code>Parser' that parses the first piece of input</code></p></dd><dt class="param">p0</dt><dd class="cmt"><p>a <code>Parser' that is to be applied successively to the rest of the input (if any) -- evaluated at most once, and only when necessary</code></p></dd><dt>returns</dt><dd class="cmt"><p>A parser that returns a list of results produced by first applying <code>f' and then
+        repeatedly </code>p' to the input (it only succeeds if <code>f' matches).
+</code></p></dd></dl><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#rep1">
+      <a id="rep1[T](⇒ Parser[T]):Parser[List[T]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">rep1</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="p">p: ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[List[T]]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">A parser generator for non-empty repetitions.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>A parser generator for non-empty repetitions.</p><p> rep1(p) repeatedly uses <code>p' to parse the input until </code>p' fails -- <code>p' must succeed at least
+            once (the result is a </code>List' of the consecutive results of <code>p')
+</code></p></div><dl class="paramcmts block"><dt class="param">p</dt><dd class="cmt"><p>a <code>Parser' that is to be applied successively to the input</code></p></dd><dt>returns</dt><dd class="cmt"><p>A parser that returns a list of results produced by repeatedly applying <code>p' to the input
+       (and that only succeeds if </code>p' matches at least once).
+</p></dd></dl><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#rep1sep">
+      <a id="rep1sep[T](⇒ Parser[T],⇒ Parser[Any]):Parser[List[T]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">rep1sep</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="p">p: ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>, <span name="q">q: ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[<span class="extype" name="scala.Any">Any</span>]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[List[T]]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">A parser generator for non-empty repetitions.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>A parser generator for non-empty repetitions.</p><p>rep1sep(p, q) repeatedly applies <code>p' interleaved with </code>q' to parse the input, until <code>p' fails.
+               The parser </code>p' must succeed at least once.
+</p></div><dl class="paramcmts block"><dt class="param">p</dt><dd class="cmt"><p>a <code>Parser' that is to be applied successively to the input</code></p></dd><dt class="param">q</dt><dd class="cmt"><p>a <code>Parser' that parses the elements that separate the elements parsed by </code>p'
+         (interleaved with <code>q')</code></p></dd><dt>returns</dt><dd class="cmt"><p>A parser that returns a list of results produced by repeatedly applying <code>p' to the input
+        (and that only succeeds if </code>p' matches at least once).
+        The results of <code>p' are collected in a list. The results of </code>q' are discarded.
+</p></dd></dl><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#repN">
+      <a id="repN[T](Int,⇒ Parser[T]):Parser[List[T]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">repN</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="num">num: <span class="extype" name="scala.Int">Int</span></span>, <span name="p">p: ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[List[T]]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">A parser generator for a specified number of repetitions.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>A parser generator for a specified number of repetitions.</p><p> repN(n, p)  uses <code>p' exactly </code>n' time to parse the input
+      (the result is a <code>List' of the </code>n' consecutive results of <code>p')
+</code></p></div><dl class="paramcmts block"><dt class="param">p</dt><dd class="cmt"><p>a <code>Parser' that is to be applied successively to the input</code></p></dd><dt>returns</dt><dd class="cmt"><p>A parser that returns a list of results produced by repeatedly applying <code>p' to the input
+       (and that only succeeds if </code>p' matches exactly <code>n' times).
+</code></p></dd></dl><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#repsep">
+      <a id="repsep[T](⇒ Parser[T],⇒ Parser[Any]):Parser[List[T]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">repsep</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="p">p: ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>, <span name="q">q: ⇒ <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[<span class="extype" name="scala.Any">Any</span>]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[List[T]]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">A parser generator for interleaved repetitions.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>A parser generator for interleaved repetitions.</p><p> repsep(p, q)   repeatedly uses <code>p' interleaved with </code>q' to parse the input, until <code>p' fails.
+ (The result is a </code>List' of the results of <code>p'.)
+
+
+
+Example: &lt;code&gt;repsep(term, &quot;,&quot;)&lt;/code&gt; parses a comma-separated list of term's,
+         yielding a list of these terms
+</code></p></div><dl class="paramcmts block"><dt class="param">p</dt><dd class="cmt"><p>a <code>Parser' that is to be applied successively to the input</code></p></dd><dt class="param">q</dt><dd class="cmt"><p>a <code>Parser' that parses the elements that separate the elements parsed by </code>p'</p></dd><dt>returns</dt><dd class="cmt"><p>A parser that returns a list of results produced by repeatedly applying <code>p' (interleaved
+        with </code>q') to the input.
+        The results of <code>p' are collected in a list. The results of </code>q' are discarded.
+</p></dd></dl><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser#rowFunctionToParser">
+      <a id="rowFunctionToParser[T]((Row) ⇒ MayErr[SqlRequestError, T]):Parser[T]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">rowFunctionToParser</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="f">f: (<a href="Row.html" class="extype" name="play.db.anorm.Row">Row</a>) ⇒ <a href="../../utils/Scala$MayErr.html" class="extype" name="play.utils.Scala.MayErr">MayErr</a>[<a href="SqlRequestError.html" class="extype" name="play.db.anorm.SqlRequestError">SqlRequestError</a>, T]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div><div class="block">
+          definition classes: <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser#rowParserToFunction">
+      <a id="rowParserToFunction[T](RowParser[T]):(Row) ⇒ MayErr[SqlRequestError, T]"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">rowParserToFunction</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="p">p: <a href="SqlParser$RowParser.html" class="extype" name="play.db.anorm.SqlParser.RowParser">RowParser</a>[T]</span>)</span>
+        <span class="result">: (<a href="Row.html" class="extype" name="play.db.anorm.Row">Row</a>) ⇒ <a href="../../utils/Scala$MayErr.html" class="extype" name="play.utils.Scala.MayErr">MayErr</a>[<a href="SqlRequestError.html" class="extype" name="play.db.anorm.SqlRequestError">SqlRequestError</a>, T]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div><div class="block">
+          definition classes: <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser#scalar">
+      <a id="scalar[T](Manifest[T]):RowParser[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">scalar</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span class="implicit">implicit </span><span name="m">m: Manifest[T]</span>)</span>
+        <span class="result">: <a href="SqlParser$RowParser.html" class="extype" name="play.db.anorm.SqlParser.RowParser">RowParser</a>[T]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser#sequence">
+      <a id="sequence[A](Traversable[Parser[A]])(CanBuildFrom[Traversable[_], A, Traversable[A]]):Parser[Traversable[A]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">sequence</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="ps">ps: Traversable[<a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[A]]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="bf">bf: <span class="extype" name="scala.collection.generic.CanBuildFrom">CanBuildFrom</span>[Traversable[_], A, Traversable[A]]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[Traversable[A]]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser#spanM">
+      <a id="spanM[A]((Row) ⇒ MayErr[SqlRequestError, Any],Parser[A]):Parser[List[A]]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">spanM</span>
+        <span class="tparams">[<span name="A">A</span>]</span>
+        <span class="params">(<span name="by">by: (<a href="Row.html" class="extype" name="play.db.anorm.Row">Row</a>) ⇒ <a href="../../utils/Scala$MayErr.html" class="extype" name="play.utils.Scala.MayErr">MayErr</a>[<a href="SqlRequestError.html" class="extype" name="play.db.anorm.SqlRequestError">SqlRequestError</a>, <span class="extype" name="scala.Any">Any</span>]</span>, <span name="a">a: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[A]</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[List[A]]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser#str">
+      <a id="str(String):RowParser[String]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">str</span>
+        
+        <span class="params">(<span name="columnName">columnName: String</span>)</span>
+        <span class="result">: <a href="SqlParser$RowParser.html" class="extype" name="play.db.anorm.SqlParser.RowParser">RowParser</a>[String]</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          definition classes: <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.util.parsing.combinator1.Parsers#success">
+      <a id="success[T](T):Parser[T]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">success</span>
+        <span class="tparams">[<span name="T">T</span>]</span>
+        <span class="params">(<span name="v">v: T</span>)</span>
+        <span class="result">: <a href="../../../scala/util/parsing/combinator1/Parsers$Parser.html" class="extype" name="scala.util.parsing.combinator1.Parsers.Parser">Parser</a>[T]</span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">A parser that always succeeds
+</p>
+            <div class="fullcomment"><div class="comment cmt"><p>A parser that always succeeds
+</p></div><dl class="paramcmts block"><dt class="param">v</dt><dd class="cmt"><p>The result for the parser</p></dd><dt>returns</dt><dd class="cmt"><p>A parser that always succeeds, with the given result <code>v'
+</code></p></dd></dl><div class="block">
+          definition classes: <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a>
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="play.db.anorm.SqlParser#symbolToColumn">
+      <a id="symbolToColumn(Symbol):ColumnSymbol"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol">
+        <span class="name">symbolToColumn</span>
+        
+        <span class="params">(<span name="columnName">columnName: <span class="extype" name="scala.Symbol">Symbol</span></span>)</span>
+        <span class="result">: <a href="SqlParser$ColumnSymbol.html" class="extype" name="play.db.anorm.SqlParser.ColumnSymbol">ColumnSymbol</a></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: implicit 
+        </div><div class="block">
+          definition classes: <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a>
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#synchronized">
+      <a id="synchronized[T0](T0):T0"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">synchronized</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="params">(<span name="arg0">arg0: T0</span>)</span>
+        <span class="result">: T0</span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#toString">
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">toString</span>
+        
+        <span class="params">()</span>
+        <span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      
+            <p class="shortcomment cmt">Returns a string representation of the object.</p>
+            <div class="fullcomment"><div class="comment cmt"><p>Returns a string representation of the object.</p><p>The default representation is platform dependent.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a string representation of the object.</p></dd></dl><div class="block">
+          definition classes: AnyRef → Any
+        </div>
+            
+            
+            
+          </div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#wait">
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">()</span>
+        <span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#wait">
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span>
+        <span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div></div>
+          
+    </li><li visbl="pub" data-isabs="false" name="scala.AnyRef#wait">
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol">
+        <span class="name">wait</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span>
+        <span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: final 
+        </div><div class="block">
+          definition classes: AnyRef
+        </div></div>
+          
+    </li></ol>
+            </div>
+
+        <div class="parent" name="play.db.anorm.SqlParser">
+              <h3>Inherited from <a href="SqlParser.html" class="extype" name="play.db.anorm.SqlParser">SqlParser</a></h3>
+            </div><div class="parent" name="scala.util.parsing.combinator1.Parsers">
+              <h3>Inherited from <a href="../../../scala/util/parsing/combinator1/Parsers.html" class="extype" name="scala.util.parsing.combinator1.Parsers">Parsers</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from AnyRef</h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+
+      </div>
+      
+      <div id="tooltip"></div>
+      
+    </body>
+      </html>

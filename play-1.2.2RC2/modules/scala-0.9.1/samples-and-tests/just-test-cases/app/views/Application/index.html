@@ -1,0 +1,8 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+#{form @upload(), enctype:'multipart/form-data'}
+    <input type="text" name="t">
+    <input type="file" name="f">
+    <input type="submit">
+#{/form}

@@ -1,0 +1,335 @@
+h1. Building the first screen
+
+Now that we have built a first data model, it’s time to start to create the first page of the application. This page will just show the most recent posts, as well as a list of older posts.
+
+Here is a mock-up of what we want to achieve:
+
+!images/guide3-mock!
+
+h2. <a>Bootstrapping with default data</a>
+
+In fact, before coding the first screen we need one more thing. Working on a web application without test data is not fun. You can’t even test what you’re doing. But because we haven’t developed the contribution screens yet, we can’t populate the blog with posts ourselves. 
+
+One way to inject default data into the blog is to load a fixture file at application load time. To do that we will create a Bootstrap Job. A Play job is something that executes itself outside of any HTTP request, for example at the application start or at specific interval using a CRON job.
+
+Let’s create the **/yabe/app/bootsrap.scala** file to define a job that will load a set of default data using **Fixtures**:
+
+bc. import play.jobs._
+    
+@OnApplicationStart class BootStrap extends Job {
+    
+    override def doJob {
+        
+        import models._
+        import play.test._
+        
+        // Import initial data if the database is empty
+        if(User.count().single() == 0) {
+            Yaml[List[Any]]("initial-data.yml").foreach { 
+                _ match {
+                    case u:User => User.create(u)
+                    case p:Post => Post.create(p)
+                    case c:Comment => Comment.create(c)
+                }
+            }
+        }        
+        
+    }
+    
+}
+
+We have annotated this Job with the **@OnApplicationStart** annotation to tell Play that we want to run this job synchronously at application start-up.
+
+p(note). In fact this job will be run differently in DEV or PROD modes. In DEV mode, Play waits for a first request to start. So this job will be executed synchronously at the first request. That way, if the job fails, you will get the error message in your browser. In PROD mode however, the job will be executed at application start-up (synchrously with the **play run** command) and will prevent the application from starting in case of an error.
+
+You have to create an **initial-data.yml** in the **yabe/conf/** directory. You can of course reuse the **data.yml** content that we just used for tests previously.
+
+Now run the application using **play run** and display the page "http://localhost:9000/":http://localhost:9000/ in the browser.
+
+p(note). You need to restart the application to apply the @BootStrap@ job. You can then connect to the SQL console to check that the database is correctly filled with initial data.
+
+h2. <a>The blog home page</a>
+
+This time, we can really start to code the home page.
+
+Do you remember how the first page is displayed? First the routes file specifies that the **/** URL will invoke the **controllers.Application.index** action method. Then this method returns a **Template** and executes the **/yabe/app/views/Application/index.html** template.
+
+We will keep these components but add code to them to load the posts list and display them.
+
+Open the **/yabe/app/controllers.scala** controller and modify the **index** action to load the posts list, as is:
+
+bc. def index = {
+    val allPosts = Post.allWithAuthorAndComments
+    html.index(
+        front = allPosts.headOption, 
+        older = allPosts.drop(1)
+    )
+}
+
+p(note). Be sure to import @models._@ in the scope of your Application controller.
+
+Can you see how we call the @views.Application.html.index@ template? It will allow us to access them from the template using the name defined by the @Symbol@. In this case, the variables **front** and **older** will be available in the template.
+
+Open the **/yabe/app/views/Application/index.scala.html** and modify it to display these objects:
+
+bc. @(
+    front:Option[(models.Post,models.User,Seq[models.Comment])], 
+    older:Seq[(models.Post,models.User,Seq[models.Comment])]
+)
+ 
+@main(title = "Home") {
+    
+    @front.map { front =>
+ 
+        <div class="post">
+            <h2 class="post-title">
+                <a href="#">@front._1.title</a>
+            </h2>
+            <div class="post-metadata">
+                <span class="post-author">by @front._2.fullname</span>
+                <span class="post-date">
+                    @front._1.postedAt.format("MMM dd")
+                </span>
+                <span class="post-comments">
+                    &nbsp;|&nbsp; 
+ 
+                    @if(front._3) {
+                        @front._3.size comments, 
+                        latest by @front._3(0).author
+                    } else {
+                        no comments
+                    }
+ 
+                </span>
+            </div>
+            <div class="post-content">
+                @Html(front._1.content.replace("\n", "<br>"))
+            </div>
+        </div>
+ 
+        @Option(older).filterNot(_.isEmpty).map { posts =>
+ 
+            <div class="older-posts">    
+                <h3>Older posts <span class="from">from this blog</span></h3>
+ 
+                @posts.map { post =>
+                    <div class="post">
+                       <h2 class="post-title">
+                           <a href="#">@post._1.title</a>
+                       </h2>
+                       <div class="post-metadata">
+                           <span class="post-author">
+                               by @post._2.fullname
+                           </span>
+                           <span class="post-date">
+                               @post._1.postedAt.format("dd MMM yy")
+                           </span>
+                           <div class="post-comments">
+                               @if(post._3) {
+                                   @post._3.size comments, 
+                                   latest by @post._3(0).author
+                               } else {
+                                   no comments
+                               }
+                           </div>
+                       </div>
+                   </div>
+                }
+ 
+            </div> 
+ 
+        }
+ 
+    }.getOrElse {
+ 
+        <div class="empty">
+            There is currently nothing to read here.
+        </div>
+ 
+    }
+    
+}
+
+You can read about the way this template works in the "Templates chapter":templates. Basically, it allows you to write Scala code in a simple text file. Under the hood, the template is compiled as a standard Scala function.
+
+OK, now refresh the blog home page.
+
+!images/guide3-1!
+
+Not pretty but it works!
+
+However you can see we have already started to duplicate code. Because we will display posts in several ways (full, full with comment, teaser) we should create another function that we could call from several templates. As templates are just functions, it is easy to compose them in several ways.
+
+Just create the new **/yabe/app/views/Application/display.scala.html** file:
+
+bc. @(post:(models.Post,models.User,Seq[models.Comment]), mode: String = "full")
+ 
+@commentsTitle = {
+    @if(post._3) {
+        @post._3.size comments, latest by @post._3(0).author
+    } else {
+        no comments
+    }
+}
+  
+<div class="post @mode">
+    <h2 class="post-title">
+        <a href="#">@post._1.title</a>
+    </h2>
+    <div class="post-metadata">
+        <span class="post-author">by @post._2.fullname</span>,
+        <span class="post-date">
+            @post._1.postedAt.format("dd MMM yy")
+        </span>
+        @if(mode != "full") {
+            <span class="post-comments">
+                @commentsTitle
+            </span>
+        }
+    </div>
+    @if(mode != "teaser") {
+        <div class="post-content">
+            <div class="about">Detail: </div>
+            @Html(post._1.content.replace("\n", "<br>"))
+        </div>
+    }
+</div>
+ 
+@if(mode == "full") {
+    
+    <div class="comments">
+        <h3>
+            @commentsTitle
+        </h3>
+        
+        @post._3.map { comment =>
+            <div class="comment">
+                <div class="comment-metadata">
+                    <span class="comment-author">by @comment.author,</span>
+                    <span class="comment-date">
+                        @comment.postedAt.format("dd MMM yy")
+                    </span>
+                </div>
+                <div class="comment-content">
+                    <div class="about">Detail: </div>
+                    @Html(comment.content.replace("\n", "<br>"))
+                </div>
+            </div>
+        }
+        
+    </div>
+    
+}
+
+
+Now using this tag we can rewrite the home page without code duplication:
+
+bc. @(
+    front:Option[(models.Post,models.User,Seq[models.Comment])], 
+    older:Seq[(models.Post,models.User,Seq[models.Comment])]
+)
+ 
+@main(title = "Home") {
+    
+    @front.map { front =>
+        
+        @display(front, mode = "home")
+ 
+        @Option(older).filterNot(_.isEmpty).map { posts =>
+ 
+            <div class="older-posts">    
+                <h3>Older posts <span class="from">from this blog</span></h3>
+ 
+                @posts.map { post =>
+                    @display(post, mode = "teaser")
+                }
+ 
+            </div> 
+ 
+        }
+ 
+    }.getOrElse {
+ 
+        <div class="empty">
+            There is currently nothing to read here.
+        </div>
+ 
+    }
+    
+}
+
+Reload the page and check that all is fine.
+
+h2. <a>Improving the layout</a>
+
+As you can see, the **index.scala.html** template extends **main.scala.html**. Because we want to provide a common layout for all blog pages, with the blog title and authentication links, we need to modify this file.
+
+Edit the **/yabe/app/views/main.scala.html** file:
+
+bc. @(title:String = "")(body: => Html)
+ 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>@title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" media="screen" href="@asset("public/stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@asset("public/images/favicon.png")">
+        <script src="@asset("public/javascripts/jquery-1.5.2.min.js")" type="text/javascript"></script>
+    </head>
+    <body>
+         
+        <div id="header">
+            <div id="logo">
+                yabe.
+            </div>
+            <ul id="tools">
+                <li>
+                    <a href="#">Log in to write something</a>
+                </li>
+            </ul>
+            <div id="title">
+                <span class="about">About this blog</span>
+                <h1><a href="#">@play.Play.configuration.get("blog.title")</a></h1>
+                <h2>@play.Play.configuration.get("blog.baseline")</h2>
+            </div>
+        </div>
+        
+        <div id="main">
+            @body
+        </div>
+        
+        <p id="footer">
+            Yabe is a (not that) powerful blog engine built with the 
+            <a href="http://www.playframework.org">Play framework</a>
+            as a tutorial application.
+        </p>
+        
+    </body>
+</html>
+
+Also, add these two keys to the configuration file:
+
+bc. # Blog engine configuration
+# ~~~~~
+blog.title=Yet another blog
+blog.baseline=We won't write about anything
+
+Refresh and check the result. 
+
+!images/guide3-2!
+
+h2. <a>Adding some style</a>
+
+Now the blog home page is almost done, but it’s not very pretty. We’ll add some style to make it shinier. As you have seen, the main template file main.html includes the **/public/stylesheets/main.css** stylesheet. We’ll keep it but add more style rules to it.
+
+You can "download it here":files/main.css, and copy it to the **/public/stylesheets/main.css** file.
+
+Refresh the home page and you should now see a styled page.
+
+!images/guide3-3!
+
+<hr>
+
+p(note). Next: %(next)"The comments page":guide4%. 
+

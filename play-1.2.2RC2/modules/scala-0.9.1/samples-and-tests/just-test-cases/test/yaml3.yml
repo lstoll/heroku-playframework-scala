@@ -1,0 +1,17 @@
+- !!models.yip.User
+    id:     8
+    name:   Guillaume
+    email:  !!Some[String] gbo@gmail.com
+    age:    !!None
+    
+- !!models.yip.User
+    id:     9
+    name:   Guillaume
+    email:  !!None
+    age:    !!None
+    
+- !!models.yip.User
+    id:     10
+    name:   Guillaume
+    email:  !!Some[String] gbo@gmail.com
+    age:    !!Some[Int] 88

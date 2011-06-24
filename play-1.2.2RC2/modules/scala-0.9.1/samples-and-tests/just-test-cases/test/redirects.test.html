@@ -1,0 +1,26 @@
+
+
+#{selenium}
+    
+    open('@{Youpi.index()}')
+    assertLocation('*/youpi/index')
+    assertTextPresent('Youpi')
+    
+    open('@{Youpi.index2()}')
+    assertLocation('*/youpi/index2')
+    assertTextPresent('COUCOU')
+    
+    open('@{Youpi.index3()}')
+    assertLocation('*/youpi/coucou')
+    assertTextPresent('COUCOU')
+    
+    open('@{Youpi.index4()}')
+    assertLocation('*/youpi/kiki')
+    assertTextPresent('KIKI')
+    
+    open('@{Youpi.index5()}')
+    assertLocation('*/youpi/index5')
+    assertTextPresent('KIKI')
+    
+    
+#{/selenium}
