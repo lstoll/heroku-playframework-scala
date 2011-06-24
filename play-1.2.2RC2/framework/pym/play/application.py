@@ -249,6 +249,7 @@ class PlayApplication(object):
             java_args.append('-Dplay.debug=yes')
 
         java_cmd = [self.java_path(), '-javaagent:%s' % self.agent_path()] + java_args + ['-classpath', cp_args, '-Dapplication.path=%s' % self.path, '-Dplay.id=%s' % self.play_env["id"], className] + args
+        print " ".join(java_cmd)
         return java_cmd
 
     # ~~~~~~~~~~~~~~~~~~~~~~ MISC
