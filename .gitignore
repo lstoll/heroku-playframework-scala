@@ -1,0 +1,4 @@
+/lib/
+*.pyc
+app/tmp
+.DS_Store
