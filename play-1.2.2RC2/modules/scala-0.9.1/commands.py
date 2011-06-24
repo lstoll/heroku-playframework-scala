@@ -23,7 +23,8 @@ def execute(**kargs):
         # replace last element with the console app
         java_cmd = app.java_cmd(args, cp_args)
         java_cmd[len(java_cmd)-2] = "play.console.Console"
-        java_cmd.insert(2, '-Xmx512M')
+        #java_cmd.insert(2, '-Xmx512M')
+        java_cmd.insert(2, '-Xmx224M')
         subprocess.call(java_cmd, env=os.environ)
         print
 
@@ -34,10 +35,14 @@ def before(**kargs):
     env = kargs.get("env")
 
     if command == 'run' or command == 'test' or command == 'auto-test':
-        args.append('-Xms512m')
-        args.append('-Xmx512m')
-        args.append('-XX:PermSize=256m')
-        args.append('-XX:MaxPermSize=256m')
+        # args.append('-Xms512m')
+        # args.append('-Xmx512m')
+        # args.append('-XX:PermSize=256m')
+        # args.append('-XX:MaxPermSize=256m')
+        args.append('-Xms224m')
+        args.append('-Xmx224m')
+        args.append('-XX:PermSize=112m')
+        args.append('-XX:MaxPermSize=112m')
 
 def after(**kargs):
 
