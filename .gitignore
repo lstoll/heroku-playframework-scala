@@ -6,3 +6,6 @@ app/precompiled
 # IntelliJ files
 /.idea
 *.iml
+# Modules and libs (dep managed)
+/app/lib/*
+/app/modules/*
