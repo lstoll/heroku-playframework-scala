@@ -1,8 +1,9 @@
 # This lets is dump a commands output through bundler's UI methods
 # There is some weird output sync going on in the play commands - the banner comes last.
+# Doesn't seem to be working thought.
 def run_cmd(cmd)
   # Dump stderr to stdout, easier than using open3
-  cmd = cmd + " 2>&1"
+  cmd = "bash -c '" + cmd + "' 2>&1 | tee -a bundle.log"
   IO.popen(cmd) do |f|
     until f.eof?
       Bundler.ui.info f.gets
