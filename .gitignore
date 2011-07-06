@@ -9,3 +9,5 @@ app/precompiled
 # Modules and libs (dep managed)
 /app/lib
 /app/modules
+/.ivy2
+/last_bundle.log
