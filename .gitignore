@@ -3,3 +3,6 @@
 app/tmp
 app/precompiled
 .DS_Store
+# IntelliJ files
+/.idea
+*.iml
