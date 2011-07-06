@@ -1,0 +1,20 @@
+- !!models.Contact
+    id:         !!NotAssigned
+    name:       Dantec
+    firstname:  Maxime
+    birthdate:  1985-11-12
+    email:      !!Some[String] hello@warry.fr
+
+- !!models.Contact
+    id:         !!NotAssigned
+    name:       Bort
+    firstname:  Guillaume
+    birthdate:  1980-12-21
+    email:      !!Some[String] guillaume.bort@gmail.com
+
+- !!models.Contact
+    id:         !!NotAssigned
+    name:       鈴木
+    firstname:  太郎
+    birthdate:  1970-05-13
+    email:      !!Some[String] contact@japan.com

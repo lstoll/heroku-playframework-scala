@@ -1,0 +1,13 @@
+h1. Play Scala
+
+Play Scala enables you to use the Scala language for your application keeping key properties of the Play framework. It uses a more functional and Scala idiomatic style of programming without giving up on simplicity and developer friendliness.
+
+Learn more on the "http://scala.playframework.org":http://scala.playframework.org website.
+
+h2. Reporting bugs
+
+Please report bugs on "our lighthouse tracker":http://play.lighthouseapp.com/projects/74274-play-scala/overview.
+
+h2. Licence
+
+Play framework is distributed under "Apache 2 licence":http://www.apache.org/licenses/LICENSE-2.0.html.
