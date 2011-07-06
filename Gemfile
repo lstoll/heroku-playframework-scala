@@ -10,7 +10,7 @@ Dir.chdir ROOT_DIR
 # Doesn't seem to be working thought.
 def run_cmd(cmd)
   # Dump stderr to stdout, easier than using open3
-  cmd = "bash -c '" + cmd + "' 2>&1 | tee -a last_bundle.log"
+  cmd = cmd + " 2>&1 | tee -a #{ROOT_DIR}/last_bundle.log"
   IO.popen(cmd) do |f|
     until f.eof?
       Bundler.ui.info f.gets
@@ -30,3 +30,11 @@ run_cmd('cd app && ../play-1.2.2/play dependencies -Divy.cache.dir=' + ivy_cache
 # Precompile our app
 run_cmd("rm -r app/precompiled")
 run_cmd("play-1.2.2/play precompile app")
+# Update paths in module references - from bundling dir to /app
+if ROOT_DIR =~ /^\/tmp/ # We're in tmp, being bundled..
+  Dir["app/modules/*"].each do |m|
+    entry = File.read m
+    entry.gsub!(ROOT_DIR, '/app')
+    File.open(m, "w") {|f| f.write(entry)}
+  end
+end
