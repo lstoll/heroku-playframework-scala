@@ -1,6 +1,3 @@
-# Testing bundler output more.
-Bundler.ui.error "++ Starting bundle"
-
 ROOT_DIR=File.expand_path(File.dirname(__FILE__))
 # Set home directory to this app. Needed for ivy dep resolution.
 ENV['HOME'] = ROOT_DIR
@@ -13,7 +10,7 @@ Dir.chdir ROOT_DIR
 # Doesn't seem to be working thought.
 def run_cmd(cmd)
   # Dump stderr to stdout, easier than using open3
-  cmd = "bash -c 'export HOME=#{ROOT_DIR} ; export ; " + cmd + "' 2>&1 | tee -a last_bundle.log"
+  cmd = "bash -c '" + cmd + "' 2>&1 | tee -a last_bundle.log"
   IO.popen(cmd) do |f|
     until f.eof?
       Bundler.ui.info f.gets
@@ -21,10 +18,15 @@ def run_cmd(cmd)
   end
 end
 
+ivy_cache_dir = '/tmp/ivy_cache_' +  Time.now.to_i.to_s
+
 # Remove log file
 run_cmd('rm last_bundle.log')
-# Synd dependencies
-run_cmd('cd app && ../play-1.2.2/play dependencies --sync')
+# Sync dependencies
+run_cmd('cd app && ../play-1.2.2/play dependencies -Divy.cache.dir=' + ivy_cache_dir + ' --sync')
+# Remove ivy cache contents
+run_cmd('rm -rf ' + ivy_cache_dir)
+run_cmd('cd app && ../play-1.2.2/play dependencies -Divy.cache.dir=' + ivy_cache_dir + ' --sync')
 # Precompile our app
 run_cmd("rm -r app/precompiled")
 run_cmd("play-1.2.2/play precompile app")
