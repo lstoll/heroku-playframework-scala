@@ -1,3 +1,0 @@
-This package provides a simple wrapper of some JDBC functionalities and a parser combinator for parsing the SQL Query result. 
-Also it provides a simple SQL generater and a corresponding parser using runtime reflection and based on some straighforward conventions.
-The main idea of the package is to avoid adding too many interfaces for users to learn and rather use standard prexiting ones. Used interfaces include Parser Combinator, Stream, unapplySeq and Map.
