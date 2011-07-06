@@ -7,5 +7,5 @@ app/precompiled
 /.idea
 *.iml
 # Modules and libs (dep managed)
-/app/lib/*
-/app/modules/*
+/app/lib
+/app/modules
