@@ -1,11 +1,11 @@
-play-1.2.2RC2/python
-play-1.2.2RC2/modules/testrunner
-play-1.2.2RC2/modules/grizzly
-play-1.2.2RC2/modules/testrunner
-play-1.2.2RC2/documentation
-play-1.2.2RC2/samples-and-tests
-play-1.2.2RC2/modules/scala-0.9.1/samples-and-tests
-play-1.2.2RC2/modules/scala-0.9.1/documentation
+play-1.2.2/python
+play-1.2.2/modules/testrunner
+play-1.2.2/modules/grizzly
+play-1.2.2/modules/testrunner
+play-1.2.2/documentation
+play-1.2.2/samples-and-tests
+play-1.2.2/modules/scala-head.lstoll/samples-and-tests
+play-1.2.2/modules/scala-head.lstoll/documentation
 
 
 
