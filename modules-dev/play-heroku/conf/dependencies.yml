@@ -1,0 +1,4 @@
+self: play -> play-heroku 0.1
+
+require:
+    - play
