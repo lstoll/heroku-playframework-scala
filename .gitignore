@@ -1,13 +1,12 @@
 /lib/
 *.pyc
-app/tmp
-app/precompiled
+/tmp
+/precompiled
 .DS_Store
 # IntelliJ files
 /.idea
 *.iml
 # Modules and libs (dep managed)
-/app/lib
-/app/modules
+/lib
+/modules
 /.ivy2
-/last_bundle.log

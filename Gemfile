@@ -10,7 +10,7 @@ Dir.chdir ROOT_DIR
 # Doesn't seem to be working thought.
 def run_cmd(cmd)
   # Dump stderr to stdout, easier than using open3
-  cmd = cmd + " 2>&1 | tee -a #{ROOT_DIR}/last_bundle.log"
+  cmd = cmd + " 2>&1 | tee -a #{ROOT_DIR}/tmp/last_bundle.log"
   IO.popen(cmd) do |f|
     until f.eof?
       Bundler.ui.info f.gets
@@ -21,18 +21,17 @@ end
 ivy_cache_dir = '/tmp/ivy_cache_' +  Time.now.to_i.to_s
 
 # Remove log file
-run_cmd('rm last_bundle.log')
+run_cmd('rm tmp/last_bundle.log')
 # Sync dependencies
-run_cmd('cd app && ../play-1.2.2/play dependencies -Divy.cache.dir=' + ivy_cache_dir + ' --sync')
+run_cmd('play-1.2.2/play dependencies -Divy.cache.dir=' + ivy_cache_dir + ' --sync')
 # Remove ivy cache contents
 run_cmd('rm -rf ' + ivy_cache_dir)
-run_cmd('cd app && ../play-1.2.2/play dependencies -Divy.cache.dir=' + ivy_cache_dir + ' --sync')
 # Precompile our app
-run_cmd("rm -r app/precompiled")
-run_cmd("play-1.2.2/play precompile app")
+run_cmd("rm -r precompiled")
+run_cmd("play-1.2.2/play precompile")
 # Update paths in module references - from bundling dir to /app
 if ROOT_DIR =~ /^\/tmp/ # We're in tmp, being bundled..
-  Dir["app/modules/*"].each do |m|
+  Dir["modules/*"].each do |m|
     entry = File.read m
     entry.gsub!(ROOT_DIR, '/app')
     File.open(m, "w") {|f| f.write(entry)}
