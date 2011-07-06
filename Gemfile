@@ -13,7 +13,7 @@ Dir.chdir ROOT_DIR
 # Doesn't seem to be working thought.
 def run_cmd(cmd)
   # Dump stderr to stdout, easier than using open3
-  cmd = "bash -c 'export HOME=#{ROOT_DIR} ; " + cmd + "' 2>&1 | tee -a last_bundle.log"
+  cmd = "bash -c 'export HOME=#{ROOT_DIR} ; export ; " + cmd + "' 2>&1 | tee -a last_bundle.log"
   IO.popen(cmd) do |f|
     until f.eof?
       Bundler.ui.info f.gets
