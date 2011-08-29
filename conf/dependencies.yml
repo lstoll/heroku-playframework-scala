@@ -1,13 +1,5 @@
 # Application dependencies
 
 require:
-    - play #1.2.3
+    - play
     - play -> scala 0.9.1
-    # - net.lstoll -> scala 0.9.1.1
-
-# repositories:
-#     - lstoll:
-#         type:       http
-#         artifact:   "http://s3.lstoll.net/play-modules/[module]-[revision].zip"
-#         contains:
-#             - net.lstoll -> *
