@@ -1,1 +1,1 @@
-web: play-1.2.2/play run --http.port=$PORT -Xmx192m --%prod
+web: play run --http.port=$PORT $PLAY_OPTS
