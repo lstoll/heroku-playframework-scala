@@ -1,5 +1,0 @@
-!!models.yip.User
-id:     8
-name:   Guillaume
-email:  !!Some[String] gbo@gmail.com
-age:    !!None

@@ -1,4 +1,0 @@
-self: play -> scala head.lstoll
-
-require:
-    - play 1.2.2
